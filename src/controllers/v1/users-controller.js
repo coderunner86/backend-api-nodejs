@@ -1,0 +1,3 @@
+const getUsers = (req, res) => {
+
+};
