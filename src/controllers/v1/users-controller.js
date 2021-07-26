@@ -1,4 +1,4 @@
-users = [{
+const users = [{
     "id": 1,
     "email": "george.bluth@reqres.in",
     "first_name": "George",
@@ -35,7 +35,7 @@ users = [{
     "last_name": "Ramos",
     "avatar": "https://reqres.in/img/faces/6-image.jpg"
 }];
-getUsers = (req, res) => {
+const getUsers = (req, res) => {
     res.send({
         "page": 2,
         "per_page": 6,
