@@ -1,4 +1,12 @@
-const users = [
+type user = {
+  id: number;
+  email: string;
+  first_name:string;
+  last_name:string;
+  avatar:string;
+}; 
+
+const users:user[] = [
   {
     id: 1,
     email: 'george.bluth@reqres.in',
@@ -42,42 +50,8 @@ const users = [
     avatar: 'https://reqres.in/img/faces/6-image.jpg',
   },
 ];
-const getUsers = (req, res) => {
-  res.send({
-    page: 2,
-    per_page: 6,
-    total: 12,
-    total_pages: 2,
-    data: users,
-    support: {
-      url: 'https://reqres.in/#support-heading',
-      text: 'To keep ReqRes free, contributions towards server costs are appreciated!',
-    },
-  });
-};
-const getUserById = (req, res) => {
-  console.log('req.params', req.params);
-  const { userId } = req.params;
-  const index = users.findIndex((item) => item.id == userId);
-  if (index !== -1) {
-    res.send({
-      data: users[index],
-    });
-    //console.log(users.findIndex(userId));
-  } else {
-    res.status(404).send({});
-    // console.log(users.findIndex(userId));
-  }
-};
 
-module.exports = {
-  getUsers,
-  getUserById,
-};
-/*
-const array1 = [5, 12, 8, 130, 44];
-
-const isLargeNumber = (element) => element > 1;
-
-console.log(array1.findIndex(isLargeNumber));
-// expected output: 3*/
+export {
+  users,
+  user
+}
