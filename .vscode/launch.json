@@ -1,0 +1,20 @@
+{
+  "configurations": [
+    
+    {
+      "type": "aws-sam",
+      "request": "direct-invoke",
+      "name": "backend_introduction__with_node:src/controllers/v1/products-controller.getProducts (nodejs14.x)",
+      "invokeTarget": {
+        "target": "code",
+        "projectRoot": "${workspaceFolder}/",
+        "lambdaHandler": "src/controllers/v1/products-controller.getProducts"
+      },
+      "lambda": {
+        "runtime": "nodejs14.x",
+        "payload": {},
+        "environmentVariables": {}
+      }
+    }
+  ]
+}

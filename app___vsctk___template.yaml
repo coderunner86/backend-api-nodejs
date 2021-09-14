@@ -1,0 +1,11 @@
+Resources:
+  backendintroductionwithnode:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: src/controllers/v1/products-controller.getProducts
+      CodeUri: >-
+        C:/Users/Dacca Tecnologia/OneDrive -
+        ImagineCX/Escritorio/folder/node_course/backend_introduction__with_node
+      Runtime: nodejs14.x
+      Environment:
+        Variables: {}
